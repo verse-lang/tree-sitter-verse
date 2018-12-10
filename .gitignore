@@ -1,0 +1,9 @@
+node_modules/
+build/
+src/
+package-lock.json
+BoundedBoolSet.vrs
+forStatement.vrs
+returnStatement.vrs
+binding.gyp
+index.js

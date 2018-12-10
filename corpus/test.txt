@@ -1,0 +1,89 @@
+===
+Class Def
+===
+class C
+class C Type arg
+class C Type arg Type2 arg2
+class C Type<Something> arg
+class C Type<Something Other> arg
+class C Type<Something> arg Type2 arg2
+class C Type arg Type2<Something> arg2
+class C Type arg Type2<Something Other> arg2
+class C Type<Something<Deeper>> arg
+class C Type<Something<Deeper> Other> arg
+class C Type<Something Other<Deeper>> arg
+class C Type<Something<Deeper> Other<Deeper>> arg
+
+---
+(program
+	(classDef)
+	(classDef)
+	(classDef)
+	(classDef)
+	(classDef)
+	(classDef)
+	(classDef)
+	(classDef)
+	(classDef)
+	(classDef)
+	(classDef)
+	(classDef)
+)
+
+===
+Func Def
+===
+f
+f => A
+f Type arg
+f Type arg Type2 arg2
+f Type arg => A
+f Type arg Type2 arg2 => A
+f => A<B>
+f => A<B C>
+f => A<B<C>>
+f => A<B C<D>>
+f => A<B<C> D<E>>
+f Type<A<B*> C<D>*> arg Type2<A B<C<D>>>** arg2 Type3 arg3 => A<B<C>* D<E>>
+
+---
+(program
+	(funcDef)
+	(funcDef)
+	(funcDef)
+	(funcDef)
+	(funcDef)
+	(funcDef)
+	(funcDef)
+	(funcDef)
+	(funcDef)
+	(funcDef)
+	(funcDef)
+	(funcDef)
+)
+
+===
+Return Statement
+===
+return n * numBits + i
+
+---
+(program
+	(return)
+)
+
+===
+Statement
+===
+if a - b * c > h
+elif 1 - 2 / 9 < 5
+while b >= 6 << 2
+for n < size - 1, ++n
+
+---
+(program
+	(statement)
+	(statement)
+	(statement)
+	(statement)
+)
